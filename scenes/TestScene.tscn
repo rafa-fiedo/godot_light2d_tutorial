@@ -5,20 +5,20 @@
 [ext_resource path="res://assets/images/cat.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/cat_eyes.png" type="Texture" id=4]
 
-[sub_resource type="CanvasItemMaterial" id=4]
+[sub_resource type="CanvasItemMaterial" id=1]
 light_mode = 2
-
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
 region = Rect2( 32, 0, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
 "name": "default",
 "speed": 1.0
@@ -39,12 +39,10 @@ position = Vector2( 275, 200 )
 color = Color( 0.290196, 0.290196, 0.290196, 1 )
 
 [node name="Cat" type="AnimatedSprite" parent="."]
-visible = false
-material = SubResource( 4 )
+material = SubResource( 1 )
 position = Vector2( 639, 228 )
 scale = Vector2( 2, 2 )
-frames = SubResource( 3 )
-frame = 1
+frames = SubResource( 4 )
 playing = true
 
 [node name="Sprite" type="Sprite" parent="Cat"]
